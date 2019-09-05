@@ -11,11 +11,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First step") {
-            steps {
-                sh 'ssh -i /home/orest/Завантаження/Kluch_3.pem ubuntu@ec2-3-88-8-11.compute-1.amazonaws.com \'hostname\''
-            }
-        }
+       
         stage("Second step") {
             steps {
                 sh 'ssh -i /home/orest/Завантаження/Kluch_3.pem ubuntu@ec2-3-88-8-11.compute-1.amazonaws.com\'uptime\''
